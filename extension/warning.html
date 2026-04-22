@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PhishGuard Warning</title>
+    <link rel="stylesheet" href="warning.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <div class="pill">PhishGuard Security Interstitial</div>
+        <h1>Potential phishing site detected</h1>
+        <p class="sub">
+          We detected high-risk signals for this destination. It may try to steal passwords, OTPs, or banking details.
+        </p>
+
+        <div class="grid">
+          <div class="kv">
+            <div class="k">Domain</div>
+            <div class="v mono" id="domain">—</div>
+          </div>
+          <div class="kv">
+            <div class="k">Risk score</div>
+            <div class="v"><span class="score" id="score">—</span><span class="muted"> / 100</span></div>
+          </div>
+        </div>
+
+        <div class="url mono" id="url">—</div>
+
+        <div class="actions">
+          <button class="btn secondary" id="back">Go back</button>
+          <button class="btn danger" id="proceed">Proceed anyway</button>
+        </div>
+
+        <p class="foot muted">
+          Tip: if this is a brand website, type the official domain manually or use a trusted bookmark.
+        </p>
+      </div>
+    </div>
+
+    <script src="warning.js"></script>
+  </body>
+</html>
+

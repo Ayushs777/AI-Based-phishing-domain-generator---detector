@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="header">
+  <span class="logo">🛡️</span>
+  <span class="title">Phish<span>Guard</span></span>
+</div>
+<div class="content" id="content">
+  <div class="loading">Checking domain...</div>
+</div>
+<div class="settings">
+  <button class="settings-toggle" id="settingsToggle">Settings</button>
+  <div class="settings-panel" id="settingsPanel" hidden>
+    <label class="label">Backend API URL</label>
+    <input class="input" id="apiBase" placeholder="http://127.0.0.1:8000" />
+    <label class="label">Web App URL (full report)</label>
+    <input class="input" id="webBase" placeholder="http://localhost:5173" />
+    <div class="row">
+      <button class="btn small secondary" id="saveSettings">Save</button>
+      <button class="btn small ghost" id="resetSettings">Reset</button>
+    </div>
+    <div class="hint" id="settingsHint"></div>
+  </div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard",
+  "description": "AI-powered phishing detection for every website you visit",
+  "version": "1.0.0",
+  "permissions": ["activeTab", "storage", "webNavigation", "notifications", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" },
+  "web_accessible_resources": [
+    {
+      "resources": ["warning.html", "warning.css", "warning.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
