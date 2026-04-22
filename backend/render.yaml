@@ -9,13 +9,14 @@ services:
     name: phishguard-api
     runtime: python
     plan: free
+    rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DATABASE_URL
         fromDatabase:
           name: phishguard-db
-          property: connectionURI
+          property: connectionString
       - key: GROQ_API_KEY
         sync: false
       - key: GOOGLE_SAFE_BROWSING_API_KEY
@@ -23,6 +24,6 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: CORS_ORIGINS
-        sync: false
+        value: "*"
       - key: PYTHON_VERSION
         value: 3.11.9
