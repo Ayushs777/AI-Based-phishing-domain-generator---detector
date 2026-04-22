@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const resetSettingsBtn = document.getElementById('resetSettings');
   const settingsHint = document.getElementById('settingsHint');
 
-  const DEFAULT_API_BASE = 'http://127.0.0.1:8000';
-  const DEFAULT_WEB_BASE = 'http://localhost:5173';
+  const DEFAULT_API_BASE = 'https://phishguard-api-iwfh.onrender.com';
+  const DEFAULT_WEB_BASE = 'https://phishguard-api-iwfh.onrender.com';
 
   function normalizeBase(v) {
     return String(v || '').trim().replace(/\/+$/, '');
